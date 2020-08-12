@@ -1,5 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <addons>
+  <addon id="vfs.sacd" version="1.4.0" name="SACD ISO support" provider-name="spiff">
+    <requires>@ADDON_DEPENDS@</requires>
+    <extension
+      point="kodi.vfs"
+      protocols="sacd"
+      extensions=".iso"
+      files="true"
+      directories="true"
+      filedirectories="true"
+      encodedhostname="true"
+      library_@PLATFORM@="@LIBRARY_FILENAME@" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Super Audio CD ISO image</summary>
+  <description lang="en_GB">This addon allows Kodi to read content from a Super Audio CD ISO image.
+
+Super Audio CD (SACD) is a read-only optical disc format for audio storage, introduced in 1999, developed jointly by Sony and Philips Electronics to be the successor to the Compact Disc.
+
+The SACD format offers more audio channels (e.g. surround sound), a higher bit rate, and longer playing time than a conventional CD.</description>
+      <disclaimer lang="en_GB">Playback seek is currently not possible.</disclaimer>
+      <platform>@PLATFORM@</platform>
+      <license>GPL-2.0-or-later</license>
+      <source>https://github.com/xbmc/vfs.sacd</source>
+      <broken>Deprecated and replaced by audiodecoder.sacd addon!</broken>
+      <assets>
+        <icon>icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
   <addon id="plugin.video.sticky" name="Sticky Leia" provider-name="Sticky" version="1.0.0_Leia">
     <requires>
       <import addon="xbmc.python" version="2.1.0" />
