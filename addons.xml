@@ -1,7 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <addons>
-  <addon id="vfs.sacd" version="1.4.0" name="SACD ISO support" provider-name="spiff">
-    <requires>@ADDON_DEPENDS@</requires>
+  <addon
+    id="vfs.sacd"
+    version="1.4.0"
+    name="SACD ISO support"
+    provider-name="spiff">
+    <requires>
+  <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.2.4"/>
+  <import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
+  <import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.4"/>
+  <import addon="kodi.binary.instance.vfs" minversion="2.3.1" version="2.3.2"/></requires>
     <extension
       point="kodi.vfs"
       protocols="sacd"
@@ -10,16 +18,16 @@
       directories="true"
       filedirectories="true"
       encodedhostname="true"
-      library_@PLATFORM@="@LIBRARY_FILENAME@" />
+      library_linux="vfs.sacd.so.1.4.0" />
     <extension point="xbmc.addon.metadata">
       <summary lang="en_GB">Super Audio CD ISO image</summary>
-  <description lang="en_GB">This addon allows Kodi to read content from a Super Audio CD ISO image.
+<description lang="en_GB">This addon allows Kodi to read content from a Super Audio CD ISO image.
 
 Super Audio CD (SACD) is a read-only optical disc format for audio storage, introduced in 1999, developed jointly by Sony and Philips Electronics to be the successor to the Compact Disc.
 
 The SACD format offers more audio channels (e.g. surround sound), a higher bit rate, and longer playing time than a conventional CD.</description>
       <disclaimer lang="en_GB">Playback seek is currently not possible.</disclaimer>
-      <platform>@PLATFORM@</platform>
+      <platform>linux</platform>
       <license>GPL-2.0-or-later</license>
       <source>https://github.com/xbmc/vfs.sacd</source>
       <broken>Deprecated and replaced by audiodecoder.sacd addon!</broken>
