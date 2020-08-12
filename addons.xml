@@ -22,7 +22,7 @@ The SACD format offers more audio channels (e.g. surround sound), a higher bit r
 <assets>
   <icon>icon.png</icon>
 </assets>
-<broken>Deprecated and replaced by audiodecoder.sacd addon!</broken>
+<!--<broken>Deprecated and replaced by audiodecoder.sacd addon!</broken>-->
 <size>830622</size>
 </extension>
 </addon>
