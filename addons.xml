@@ -1,5 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <addons>
+<addon
+  id="vfs.nfs"
+  version="2.1.0"
+  name="NFS support"
+  provider-name="spiff">
+  <requires>
+<import addon="kodi.binary.global.main" minversion="1.2.0" version="1.2.4"/>
+<import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
+<import addon="kodi.binary.global.filesystem" minversion="1.1.0" version="1.1.4"/>
+<import addon="kodi.binary.global.network" minversion="1.0.0" version="1.0.4"/>
+<import addon="kodi.binary.instance.vfs" minversion="2.3.1" version="2.3.2"/></requires>
+  <extension
+    point="kodi.vfs"
+    protocols="nfs"
+    files="true"
+    directories="true"
+    library_linux="vfs.nfs.so.2.1.0" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Network File System support</summary>
+    <description lang="en_GB">Client for accessing NFS shares over a network.
+
+The Network File System (NFS, also known as Network File Service), is a protocol developed by Sun Microsystems that enables access to files via a network.</description>
+    <platform>linux</platform>
+    <lifecyclestate type="broken">Not maintained and support within Kodi itself!</lifecyclestate>
+  </extension>
+</addon>
 <addon id="vfs.sacd" version="1.4.0" name="SACD ISO support" provider-name="spiff">
 <requires>
 <import addon="kodi.binary.global.main" minversion="1.2.0" version="1.2.0"/>
@@ -22,7 +48,8 @@ The SACD format offers more audio channels (e.g. surround sound), a higher bit r
 <assets>
   <icon>icon.png</icon>
 </assets>
-<addonstate type="deprecated">Deprecated and replaced by audiodecoder.sacd addon!</addonstate>
+    <lifecyclestate type="deprecated" lang="en_GB">Replaced by audiodecoder.sacd addon!</lifecyclestate>
+    <lifecyclestate type="deprecated" lang="de_DE">Ersetzt durch das Addon audiodecoder.sacd!</lifecyclestate>
 <size>830622</size>
 </extension>
 </addon>
